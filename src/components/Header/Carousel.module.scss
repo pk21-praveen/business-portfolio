@@ -1,0 +1,101 @@
+.carousel {
+  position: relative;
+
+  &__button {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px; // Adjusted font size for buttons
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &__button--prev {
+    left: 20px; // Align to the left
+  }
+
+  &__button--next {
+    right: 20px; // Align to the right
+  }
+
+  &__bullet {
+    background-color: white;
+    opacity: 0.7;
+    width: 12px; // Increased size for better visibility
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+
+    &--active {
+      background-color: #007bff; // Active bullet color
+      opacity: 1;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 30px; // Adjusted for better positioning
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-pagination-bullets {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-carousel {
+    .swiper-slide {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .carousel-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        padding: 0 20px; // Adjusted padding for better text alignment
+
+        h5 {
+          font-size: 1.5rem; // Adjusted font size for heading
+          margin-bottom: 10px; // Adjusted margin for heading
+        }
+
+        h1 {
+          font-size: 3rem; // Adjusted font size for main heading
+          margin-bottom: 20px; // Adjusted margin for main heading
+        }
+
+        p {
+          font-size: 1rem; // Adjusted font size for paragraph
+          margin-bottom: 20px; // Adjusted margin for paragraph
+        }
+
+        .btn {
+          font-size: 1rem; // Adjusted font size for buttons
+          padding: 10px 20px; // Adjusted padding for buttons
+          margin-right: 10px; // Adjusted margin between buttons
+        }
+      }
+    }
+  }
+}
